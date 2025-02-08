@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Quicksand", serif;
+    border: none;
+}
+
+body {
+    height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    border: 1px solid rgb(238, 97, 120);
+    width: 350px;
+    height: 500px;
+    background-color: rgba(180, 177, 177, 0.171);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 3px 1px 26px 15px rgba(242,143,143,1);
+-webkit-box-shadow: 3px 1px 26px 15px rgba(242,143,143,1);
+-moz-box-shadow: 3px 1px 26px 15px rgba(242,143,143,1);
+    padding: 16px;
+    border-radius: 10px;
+    /* background-color: red; */
+    
+}
+
+.card img  {
+    position: relative;
+    top: -40px;
+    /* background-color: red;    */
+    border: 1px solid rgb(247, 128, 148);
+    height: 220px;
+    width: 300px;
+    object-fit: fill;
+    
+}
+
+.text {
+    position: relative;
+    top: -10px;
+}
+.text h1 {
+    color: rgb(243, 98, 122);
+}
+
+.button {
+    display: flex;
+    /* justify-content: space-between; */
+    justify-content: center;
+    gap: 2rem;
+    width: 100%;
+    position: relative;
+    top: 20px;
+}
+
+.button button {
+    padding: 1rem;
+    color: rgb(226, 17, 51);
+    font-size: 2rem;
+    /* background-color: red; */
+    /* border: 2px solid black; */
+    background-color: rgb(165, 243, 165);
+    border-radius: 10px;
+    font-weight: 700;
+    width: 100px;
+    cursor: pointer;
+}
+
+.button button:nth-child(2) {
+    background-color: rgb(250, 142, 142);
+}
+
+
+.displaynone, .yes, .change-text {
+    display: none;
+}
+

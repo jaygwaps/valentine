@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+         <div class="img">
+             <img id="mainImage" src="bugcat-bugcatsticker.gif" alt="">
+             <div class="displaynone" id="altImages">
+                <img src="bugcact-capoo.gif" alt="">
+                <img src="bugcat-bugcatsticker (1).gif" alt="">
+                <img src="cat-hugs.gif" alt="" srcset="">
+             </div>
+             <div class="yes">
+                <img src="bugcat-capoo.gif" alt="" srcset="">
+             </div>
+         </div>
+         <div class="text">
+            <h1>Will you be my Valentine?</h1>
+            <div class="change-text">
+                <h1>Knew you would say yes!</h1>
+            </div>
+         </div>
+         <div class="button">
+            <button id="yesBtn">Yes</button>
+            <button id="noBtn">No</button>
+         </div>
+    </div>
+
+    <script>
+        let clickCount = 0;
+    
+        document.getElementById("noBtn").addEventListener("click", function() {
+            let images = document.querySelectorAll("#altImages img");
+            let mainImage = document.getElementById("mainImage");
+            let randomIndex = Math.floor(Math.random() * images.length);
+            mainImage.src = images[randomIndex].src;
+    
+            clickCount++;
+            this.style.transform = `scale(${1 + clickCount * 0.1})`;
+            this.style.position = "absolute";
+            this.style.top = Math.random() * window.innerHeight * 0.8 + "px";
+            this.style.left = Math.random() * window.innerWidth * 0.8 + "px";
+    
+            if (clickCount >= 5) {
+                this.style.display = "none";
+            }
+        });
+    
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            let yesImage = document.querySelector(".yes img");
+            let mainImage = document.getElementById("mainImage");
+            mainImage.src = yesImage.src;
+    
+            // Hide buttons
+            document.querySelector(".button").style.display = "none";
+    
+            // Change text
+            document.querySelector(".text h1").style.display = "none"; // Hide original text
+            document.querySelector(".change-text").style.display = "block"; // Show new text
+        });
+    </script>
+    
+</body>
+</html>
